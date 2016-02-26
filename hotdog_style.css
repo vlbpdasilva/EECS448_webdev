@@ -1,0 +1,45 @@
+body
+{
+	background: url(background.jpg);
+}
+
+hr 
+{
+	border-width: 2px;
+	border-color: black;
+	background-color: black;
+	color: black;
+	
+}
+
+h2
+{
+	font-weight: bold;
+    margin-top: 0.50em;
+    margin-bottom: 0.50em;
+    margin-left: 0;
+    margin-right: 0;
+	color: #175ECE;
+
+}
+
+h2:hover
+{
+	color: #0361FA;
+
+}
+
+h3.pros
+{
+	color: #67DD23;
+	font-weight: bold;
+	
+}
+
+h3.cons
+{
+	color: red;
+	font-weight: bold;
+
+}
+
