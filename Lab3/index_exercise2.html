@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+	<script type = "text/javascript"
+		src = "slideshow.js">
+	</script>
+	<link href="style_cena.css"
+		rel = "stylesheet"
+		type = "text/css"/>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+	<title>EECS 448 - Exercise 1</title>
+</head>
+
+<body>
+
+<br> <br> <br>
+
+<div class="container">
+   <div class="row">
+
+    <div class="col-sm-8">
+      <br><br><br>
+      <center><font size = "6">Victor Luiz da Silva</font></center>
+      <p align =  "center"><font size = "4"><a href="http://github.com/vlbpdasilva"> Github </a></font</p>
+      
+    </div>
+	<div class="col-sm-4">
+      <img src="cena_background.png" width="300" height="266">
+    </div>
+  </div>
+</div>
+
+<br><hr><br><br>
+
+<center>
+
+	<img src="1.jpg" id = "cena1" width="500" height="500" class = "shown">
+	<img src="2.jpg" id = "cena2" width="500" height="500" class = "hidden">
+	<img src="3.jpg" id = "cena3" width="500" height="500" class = "hidden">
+	<img src="4.jpg" id = "cena4" width="500" height="500" class = "hidden">
+	<img src="5.jpg" id = "cena5" width="500" height="500" class = "hidden">
+	
+	<br>
+	<button id="button1" onclick="previous()"> Previous </button>
+	<button id="button2" onclick="next()"> Next </button>
+	
+</center>
+
+
+</body>
+</html>
