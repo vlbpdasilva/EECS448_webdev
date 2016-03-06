@@ -7,66 +7,64 @@
   	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
   	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 	<script type = "text/javascript"
-		src = "validator.js">
+		src = "formChecker.js">
 	</script>
-	<link href="hotdog_style.css"
+	<link href="store_style.css"
 		rel = "stylesheet"
 		type = "text/css"/>
+	<?php include 'customerBackend.php';?>
 	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
 	<title>EECS 448 - Exercise 1</title>
 </head>
 
 <body>
-
-<br> <br> <br>
-
-<div class="container">
-   <div class="row">
-    <div class="col-sm-4">
-      <a href="http://ku.edu"><img src="jayhawk.png" width="300" height="266"></a>
-    </div>
-  
-    <div class="col-sm-8">
-      <br><br><br>
-      <center><font size = "6">Victor Luiz da Silva</font></center>
-      <p align =  "center"><font size = "4"><a href="http://github.com/vlbpdasilva"> Github </a></font</p>
-      
-    </div>
-  </div>
-</div>
-
-<br><hr><br><br>
-
-<center>
-
-<h2>Hot Dog</h2><br>
-<div class="container">
-   <div class="row">
-    <div class="col-sm-4">
-      <img src="hotdog.png" width="420" height="266">
-    </div>
-	<div class="col-sm-8" align="right">
-      <h3 class="pros">Pros:</h3>
-	  <font size = "3" color = "#4072B2">- Delicious and fun <br>- Easy to make <br>- Different types of 
-	  toppings <br>- Very cheap</font>
-	  <h3 class="cons">Cons:</h3><font size = "3" color = "#4072B2">None!</font>
-    </div>
-  </div>
-</div>
-
-<h3> Favorite websites: </h3>
-<li><a href="https://en.wikipedia.org/wiki/Hot_dog">Wikipedia article on Hot Dogs</a>
-<li><a href="http://hot-dog.org/">Hot-Dog.org</a>
-<li><a href="http://www.foodnetwork.com/recipes/bobby-flay/grilled-link-hot-dogs-with-homemade-pickle-relish-recipe.html">
-	Hot Dog recipe </a>
-
-<h3> Hot Dog Recipe video: </h3><br>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/D0EAxdmzjzE" frameborder="0" allowfullscreen></iframe>
-
-
+	<center><h2>Welcome to the Online Store!</h2>
 	
-</center>
+	<br><br>
+	<table>
+		<tr> 
+			<td><center> Enter username: </center></td>
+			<td> &nbsp</td>
+			<td><center> Enter password: </center></td>
+		</tr>
+		<tr>
+			<td> <form id="form1"><input type="text" name="username"> </td>
+			<td> &nbsp </td>
+			<td> <input type="password" name="password"> </td>
+		
+		</tr></table>
+		<br><br>
+	<table>
+		<tr> <td><center> Choose your products: </center></td>
+		     <td> <center>  Amount: </center> </td>
+		     <td><center> Choose your shipping method: </center></td>
+		</tr>
+		<tr>
+			<td> <center> Strawberry ($1.00 each)</center></td>
+			<td> <center> <input size="5" type="text" name="strawberry"> </td> </center></td>
+			<td> <center> Free, 7 day delivery <input type="radio" name="delivery" id="free">  
+				</center></td>
+		</tr><tr>
+			<td> <center> Banana ($3.00 each)</center></td>
+			<td> <center><input size="5" type="text" name="banana" id="banana"> </td> </center></td>
+			<td> <center> $50.00, overnight delivery <input type="radio" name="delivery" 	id = "overnight">  
+					</center></td>
 
+</tr><tr>
+			<td> <center> Watermelon  ($5.00 each)</center></td>
+			<td> <center> <input size="5" type="text" name="watermelon" 
+	id="watermelon"> </td> </center></td>
+			<td> <center> $5.00, 3 day delivery <input type="radio" name="delivery" 	id = "3day">  
+					</center></td>
 
+	</form>
+	</table>
+	<br><br>
+	<table>
+		<tr> <td><button onclick="reset()" type="button"> Reset </button> </td>
+		<td><button onclick="order()" type="button"> Place order</button></td> </tr>
+	</table>
+	</center>
+	
 </body>
 </html>

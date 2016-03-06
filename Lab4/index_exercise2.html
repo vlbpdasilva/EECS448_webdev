@@ -1,55 +1,55 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+<head>	
 	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-  	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-	<script type = "text/javascript"
-		src = "slideshow.js">
-	</script>
-	<link href="style_cena.css"
-		rel = "stylesheet"
-		type = "text/css"/>
-	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
-	<title>EECS 448 - Exercise 1</title>
+  	<title>EECS 448 - Exercise 1</title>
 </head>
 
 <body>
+<h1>&nbsp; Welcome to the world's hardest quiz! </h1>
+<font size = "4">
 
-<br> <br> <br>
+&nbsp; &nbsp; Question 1: What's 1+1?
+<form action="Quiz.php" method="post">
+  &nbsp; &nbsp;<input type="radio" name="Q1_answer" value="1"> 1<br>
+  &nbsp; &nbsp;<input type="radio" name="Q1_answer" value="2"> 2<br>
+  &nbsp; &nbsp;<input type="radio" name="Q1_answer" value="3"> 3<br>
+  &nbsp; &nbsp;<input type="radio" name="Q1_answer" value="4"> 4
 
-<div class="container">
-   <div class="row">
+<br><br>
+&nbsp; &nbsp; Question 2: Which of these words starts with the letter A? <br>
 
-    <div class="col-sm-8">
-      <br><br><br>
-      <center><font size = "6">Victor Luiz da Silva</font></center>
-      <p align =  "center"><font size = "4"><a href="http://github.com/vlbpdasilva"> Github </a></font</p>
-      
-    </div>
-	<div class="col-sm-4">
-      <img src="cena_background.png" width="300" height="266">
-    </div>
-  </div>
-</div>
+  &nbsp; &nbsp;<input type="radio" name="Q2_answer" value="Banana"> Banana<br>
+  &nbsp; &nbsp;<input type="radio" name="Q2_answer" value="Watermelon"> Watermelon<br>
+  &nbsp; &nbsp;<input type="radio" name="Q2_answer" value="Apple"> Apple<br>
+  &nbsp; &nbsp;<input type="radio" name="Q2_answer" value="Strawberry"> Strawberry
 
-<br><hr><br><br>
+<br><br>
+&nbsp; &nbsp; Question 3: Who was the 5th president of the United States? <br>
 
-<center>
+  &nbsp; &nbsp;<input type="radio" name="Q3_answer" value="James Madison"> James Madison<br>
+  &nbsp; &nbsp;<input type="radio" name="Q3_answer" value="Andrew Jackson"> Andrew Jackson<br>
+  &nbsp; &nbsp;<input type="radio" name="Q3_answer" value=" John Quincy Adams"> John Quincy Adams<br>
+  &nbsp; &nbsp;<input type="radio" name="Q3_answer" value="James Monroe"> James Monroe
 
-	<img src="1.jpg" id = "cena1" width="500" height="500" class = "shown">
-	<img src="2.jpg" id = "cena2" width="500" height="500" class = "hidden">
-	<img src="3.jpg" id = "cena3" width="500" height="500" class = "hidden">
-	<img src="4.jpg" id = "cena4" width="500" height="500" class = "hidden">
-	<img src="5.jpg" id = "cena5" width="500" height="500" class = "hidden">
-	
-	<br>
-	<button id="button1" onclick="previous()"> Previous </button>
-	<button id="button2" onclick="next()"> Next </button>
-	
-</center>
+<br><br>
+&nbsp; &nbsp; Question 4: Who holds the KU basketball record for most 3-pointers in a game with 11?
+<br>
+  &nbsp; &nbsp;<input type="radio" name="Q4_answer" value="Andrew Wiggins"> Andrew Wiggins<br>
+  &nbsp; &nbsp;<input type="radio" name="Q4_answer" value="Mario Chalmers"> Mario Chalmers<br>
+  &nbsp; &nbsp;<input type="radio" name="Q4_answer" value="Terry Brown"> Terry Brown<br>
+  &nbsp; &nbsp;<input type="radio" name="Q4_answer" value=" Paul Pierce"> Paul Pierce
+<br><br>
+&nbsp; &nbsp; Question 5: Where is the EECS department located at KU?
+<br>
+  &nbsp; &nbsp;<input type="radio" name="Q5_answer" value="Eaton Hall"> Eaton Hall<br>
+  &nbsp; &nbsp;<input type="radio" name="Q5_answer" value="Snow Hall"> Snow Hall<br>
+  &nbsp; &nbsp;<input type="radio" name="Q5_answer" value="Budig Hall"> Budig Hall<br>
+  &nbsp; &nbsp;<input type="radio" name="Q5_answer" value="Strong Hall"> Strong Hall
+  <br><br>&nbsp; &nbsp;
+  <input type="submit" value = "Submit Quiz">
+</form> 
+</font>
 
 
 </body>
