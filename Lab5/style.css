@@ -1,0 +1,44 @@
+body
+{
+	background: url(background.jpg);
+}
+
+hr 
+{
+	border-width: 2px;
+	border-color: black;
+	background-color: black;
+	color: black;
+	
+}
+
+h1 {
+    color: green;
+}
+
+input[type=text], select
+{
+    width: 20%;
+    padding: 12px 20px; 
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+input:focus::-webkit-input-placeholder { color:transparent; }
+
+.button
+{
+    background-color: #4CAF50; 
+    color: white;
+    padding: 16px 22px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    -webkit-transition-duration: 0.01s;
+}
+
+::-webkit-input-placeholder {
+   text-align: center;
+}
