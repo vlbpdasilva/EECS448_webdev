@@ -17,8 +17,7 @@ $username = $_POST["username"];
 
 if ($username == "")
     {
-        echo "<h1>Error: empty username.</h1>";
-    
+        echo "<h1>Error: empty username.</h1><br><br>";        
     }
     
 else
@@ -26,15 +25,18 @@ else
     $sql = "INSERT INTO Users (user_id) VALUES ('$username')";
 
 
-    if ($mysqli->query($sql) === TRUE) {
-        echo "<h1>New user created successfully.</h1>";
-    } else {
-        echo "<h1>Error: username already exists.</h1>";
+    if ($mysqli->query($sql) === TRUE) 
+    {
+        echo "<h1>New user created successfully.</h1><br><br>";        
+    } 
+    else 
+    {
+        echo "<h1>Error: username already exists.</h1><br><br>";        
     }
 
 }
 
-
+echo "<a class='button' id='button1' href='lab5_main.html'> Return to forum homepage </a> ";
 echo "</center>";
 
 $mysqli->close();

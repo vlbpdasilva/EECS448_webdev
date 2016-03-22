@@ -16,6 +16,17 @@ h1 {
     color: green;
 }
 
+
+h2 {
+    color: green;
+}
+
+#welcome
+{
+    color: green;
+    font-size: 32px;
+}
+
 input[type=text], select
 {
     width: 20%;
@@ -23,10 +34,21 @@ input[type=text], select
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
-    text-align: center;
+    
+}
+
+textarea, select
+{
+    
+    padding: 12px 20px; 
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  
+    
 }
 
 input:focus::-webkit-input-placeholder { color:transparent; }
+textarea:focus::-webkit-input-placeholder { color:transparent; }
 
 .button
 {
@@ -39,6 +61,95 @@ input:focus::-webkit-input-placeholder { color:transparent; }
     -webkit-transition-duration: 0.01s;
 }
 
-::-webkit-input-placeholder {
+::-webkit-input-placeholder 
+{
    text-align: center;
+}
+
+::-webkit-textarea-placeholder 
+{
+   text-align: center;
+   margin-top: 20px;
+}
+
+table 
+{
+    width: 100%;
+    text-align: center;
+}
+
+tr
+{
+    background-color: #f2f2f2;
+}
+
+tr:hover 
+{
+    background-color: #ddd;
+    
+}
+
+th 
+{
+    padding-top: 12px;
+    padding-bottom: 12px;
+    background-color: #0079ff;
+    color: white;
+}
+
+#button1 
+{	
+	background-color: #4CAF50; 
+	color: white;
+	padding: 16px 32px;
+	text-align: center;
+	text-decoration: none;
+	font-size: 16px;
+	margin: 4px 2px;
+	-webkit-transition-duration: 0.01s;
+}
+
+#button1:hover
+{
+    	background-color: white; 
+    	color: #4CAF50; 
+   	border: 2px solid #4CAF50;
+}
+
+#button2
+{	
+	background-color: #3D59B6;
+	color: white;
+	padding: 16px 32px;
+	text-align: center;
+	text-decoration: none;
+	font-size: 16px;
+	margin: 4px 2px;
+	-webkit-transition-duration: 0.01s;
+}
+
+#button2:hover
+{
+    	background-color: white; 
+    	color: #3D59B6;
+   	border: 2px solid #3D59B6;
+}
+
+#button3
+{	
+	background-color: #BC3F80;
+	color: white;
+	padding: 16px 32px;
+	text-align: center;
+	text-decoration: none;
+	font-size: 16px;
+	margin: 4px 2px;
+	-webkit-transition-duration: 0.01s;
+}
+
+#button3:hover
+{
+    	background-color: white; 
+    	color: #BC3F80;
+   	border: 2px solid #BC3F80;
 }

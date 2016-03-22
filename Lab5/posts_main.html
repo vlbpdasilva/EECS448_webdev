@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="style.css"
+		rel = "stylesheet"
+		type = "text/css"/>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+	<title>EECS 448 - View users' posts</title>
+</head>
+
+<body>
+<center>
+
+    <h2>LIST OF ALL POSTS (IN ORDER OF POSTING)</h2>
+	<br>
+    
+<?php
+ 
+$mysqli = new mysqli("mysql.eecs.ku.edu", "pberger", "mysqlpassword", "pberger");
+
+if ($mysqli->connect_errno) {
+    printf("Connect failed: %s\n", $mysqli->connect_error);
+    exit();
+}
+
+$sql = "SELECT * FROM Users";
+$result = $mysqli->query($sql);
+
+if($result->num_rows === 0)
+    {
+        echo "<h2> Sorry, no results found. </h2><br>";
+    }
+
+else
+    {
+        echo "<h2> Use drop-down list to select an user, and then click Submit: </h2><br>";
+        echo "<form action='ViewUserPosts.php' method='post' id='form3'><select id = 'user' name = 'user'><br><br>";
+        while($row = $result->fetch_assoc()) 
+        {
+            $UserIDRow = $row["user_id"];
+            echo "<option value = '$UserIDRow'> $UserIDRow </option>";
+        }
+
+        echo "</select><br><br><button class='button' id='button1' type='submit'>Submit</button></form>";
+     
+
+    } 
+
+$mysqli->close();
+?>
+
+</h2><br><br>
+    <a class='button' id='button1' href='lab5_main.html'> Return to forum homepage </a>
+</center>
+</body>
+</html>

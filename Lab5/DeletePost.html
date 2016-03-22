@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="style.css"
+		rel = "stylesheet"
+		type = "text/css"/>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+	<title>EECS 448 - View users' posts</title>
+</head>
+
+<body>
+<center>
+
+    <h1> &nbsp; &nbsp; View users' posts</h1>
+	<br>
+	<h2> Select post(s) to delete: </h2>
+	<br><br>
+	<form action="DeletePost.php" method="post" id="form4">
+
+            
+ <?php
+ 
+$mysqli = new mysqli("mysql.eecs.ku.edu", "pberger", "mysqlpassword", "pberger");
+
+if ($mysqli->connect_errno) {
+    printf("Connect failed: %s\n", $mysqli->connect_error);
+    exit();
+}
+
+$sql = "SELECT * FROM Posts ORDER BY 'post_id' ASC";
+$result = $mysqli->query($sql);
+
+if ($result->num_rows > 0) {
+  
+     while($row = $result->fetch_assoc()) {
+		 echo "<table>
+        <tr> <th> POST ID: </th> <th> AUTHOR: </th> <th> CONTENT: </th> <th> DELETE? </th> </tr>";
+         echo "<tr><td>" . $row["post_id"] . "</td><td>" . $row['author_id'] . "</td><td>" . $row['content'] . "</td><td><input type='checkbox' name='posts[]' value='" . $row['post_id'] . "'></td></tr>";
+     }
+     
+} else {
+     echo "<h2>Sorry, no results found.</h2>";
+}
+
+$mysqli->close();
+?>
+
+</h2></table><br><br>
+<button class="button" type="submit">Submit</button>
+</form>
+	
+</center>
+</body>
+</html>
